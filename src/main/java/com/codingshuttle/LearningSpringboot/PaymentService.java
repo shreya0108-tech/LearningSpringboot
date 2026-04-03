@@ -1,12 +1,10 @@
 package com.codingshuttle.LearningSpringboot;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 
-@Scope("prototype")
 @Service
 public class PaymentService {
           public void pay(double amount) {

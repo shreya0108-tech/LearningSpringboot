@@ -1,6 +1,7 @@
 package com.codingshuttle.LearningSpringboot;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.CommandLineRunner;
@@ -11,8 +12,9 @@ public class LearningSpringbootApplication implements CommandLineRunner {
 	@Autowired
 	PaymentService paymentService;
 
+	//@Qualifier("smsNotificationService")
 	@Autowired
-	PaymentService paymentService2;
+	NotificationService notificationService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(LearningSpringbootApplication.class, args);
@@ -20,8 +22,7 @@ public class LearningSpringbootApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		paymentService.pay(100);
-		paymentService2.pay(200);
 		System.out.println("Hash code of paymentService: " + paymentService.hashCode());
-		System.out.println("Hash code of paymentService2: " + paymentService2.hashCode());
+		notificationService.sendNotification("Payment successful!");
 	}
 }
