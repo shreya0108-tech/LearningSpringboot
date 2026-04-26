@@ -24,5 +24,6 @@ public class Employee {
     private String department;
     private String email;
     private String phoneNumber;
+    private int age;
     private LocalDate dateOfJoining;
 }

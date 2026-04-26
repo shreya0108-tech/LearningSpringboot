@@ -2,6 +2,8 @@ package com.codingshuttle.LearningSpringboot.dto;
 
 import java.time.LocalDate;
 
+import com.codingshuttle.LearningSpringboot.annotation.AgeValidator;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,6 +19,7 @@ public class EmployeeDto {
           private String department;
           private String email;
           private String phoneNumber;
+          @AgeValidator
+          private int age;
           private LocalDate dateOfJoining;
-          
 }
