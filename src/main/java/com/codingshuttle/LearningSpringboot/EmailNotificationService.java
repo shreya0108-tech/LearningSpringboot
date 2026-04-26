@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 //@Primary
 @Service
-@ConditionalOnProperty(name = "notification.service.type", havingValue = "email", matchIfMissing = false)
+//@ConditionalOnProperty(name = "notification.service.type", havingValue = "email", matchIfMissing = false)
 public class EmailNotificationService implements NotificationService {
           @Override
           public void sendNotification(String message) {
